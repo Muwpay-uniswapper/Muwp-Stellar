@@ -12,9 +12,12 @@ MUWP leverages Stellar's Soroban to offer advanced cross-chain transaction capab
 2. **Select Tokens:** Choose the tokens you wish to swap and the target (XLM).
 3. **Swap Execution:** MUWP displays optimal routes, execute the swap with user confirmation.
 
-## Stellar Integration
-MUWP's integration with Stellar and Soroban ensures high-speed, low-cost, and secure transactions, leveraging Stellar's network for broader DeFi applications.
-
 ## Learn More
 For detailed documentation and API references, visit [MUWP Docs](https://docs.muwp.xyz/).
+
+## Support
+For support, open an issue or contact us via [support@muwp.xyz](mailto:support@muwp.xyz).
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
