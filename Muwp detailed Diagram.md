@@ -3,9 +3,33 @@
 ***
 
 
+```mermaid
+sequenceDiagram
+    participant User as User
+    participant Wallet as User Wallet
+    participant SP as Smart Protocol Optimization (MUWP)
+    participant DEX as External DEX
+    participant Bridge as Cross-Chain Bridge
+    participant Stellar as Stellar Network (Soroban)
 
-![image](https://github.com/Muwpay-uniswapper/Muwp-Stellar/assets/156535880/5a9ccf4f-9685-46c5-a1a6-690d804bcc5b)
-
+    User->>Wallet: Connect Wallet
+    Wallet-->>SP: Send Token Holdings
+    User->>SP: Select Token & Destination (XLM)
+    SP->>DEX: Query Best Swap Routes
+    SP->>Bridge: Query Cross-Chain Routes
+    DEX-->>SP: Return Options
+    Bridge-->>SP: Return Cross-Chain Options
+    SP->>User: Propose Optimal Route
+    alt Optimal Route via DEX
+        User->>DEX: Confirm Swap
+        DEX->>Stellar: Execute Swap to XLM
+    else Optimal Route via Bridge
+        User->>Bridge: Confirm Swap
+        Bridge->>Stellar: Execute Cross-Chain Swap to XLM
+    end
+    Stellar-->>User: Transfer XLM to Wallet
+    User->>SP: Acknowledge Receipt & Rate Experience
+```
 
 MUWP seamlessly facilitates cross-chain token swaps to Stellar's XLM, leveraging user interactions, AI protocol optimization, and Soroban Smart Contracts for a streamlined experience.
 
