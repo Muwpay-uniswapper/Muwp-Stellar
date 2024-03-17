@@ -3,7 +3,39 @@
 
 ***
 
-![image](https://github.com/Muwpay-uniswapper/Muwp-Stellar/assets/156535880/ec0334a1-b558-43f8-83c8-ebd99557cb59)
+```mermaid
+sequenceDiagram
+    participant User as User
+    participant MUWP as MUWP Platform
+    participant SC as Smart Contracts on Various Blockchains
+    participant DEX as Decentralized Exchange
+    participant Bridge as Cross-Chain Bridge
+    participant AS as Atomic Swaps
+    participant SSC as Soroban Smart Contracts
+    participant Stellar as Stellar Network
+
+    User->>+MUWP: Initiate Swap
+    MUWP->>+SC: Fetch Token Prices
+    SC-->>-MUWP: Return Prices
+    MUWP->>+DEX: Query Best Swap Routes
+    MUWP->>+Bridge: Query Cross-Chain Routes
+    DEX-->>MUWP: Provide Options
+    Bridge-->>MUWP: Provide Cross-Chain Options
+    MUWP->>+AS: Check for Direct Swap Availability
+    AS-->>-MUWP: Return Direct Swap Options
+    MUWP->>SSC: Determine Optimal Path
+    alt Optimal Route via DEX
+        MUWP->>DEX: Execute Swap
+        DEX->>Stellar: Convert to XLM
+    else Optimal Route via Bridge
+        MUWP->>Bridge: Execute Cross-Chain Swap
+        Bridge->>Stellar: Convert to XLM
+    else Direct Swap via Atomic Swaps
+        MUWP->>AS: Execute Atomic Swap
+        AS->>Stellar: Convert to XLM
+    end
+    Stellar-->>User: Transfer XLM to Wallet
+```
 
 ***
 
