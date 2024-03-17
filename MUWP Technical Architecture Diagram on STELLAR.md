@@ -41,7 +41,7 @@ sequenceDiagram
 
 ##  Multi-Blockchain Swap Process with MUWP
 
-This sequence diagram illustrates the process a user goes through to perform a token swap using a Multi-Blockchain User Wallet Platform (MUWP). The MUWP platform facilitates swaps across various blockchains by finding the most optimal route for the user's desired exchange.
+This sequence diagram illustrates the process a user goes through to perform a token swap using MUWP. MUWP  facilitates swaps across various blockchains by finding the most optimal route for the user's desired exchange.
 
 Here's a breakdown of each step:
 
@@ -68,9 +68,9 @@ Here's a breakdown of each step:
 
 **5. DEX and Bridge Respond**
 
-* The DEXs provide the MUWP with details about the available swap options and their associated rates. These options might involve converting the source token to multiple intermediate tokens before reaching the desired destination token.
+* The DEXs provide the MUWP with details about the available swap options and their associated rates. These options might involve converting the source token to multiple intermediate tokens before reaching the desired destination token XLM.
 
-* Similarly, the cross-chain bridge(s) respond with information about the cross-chain swap possibilities. This could involve wrapping the source token on one blockchain, sending it to another chain via the bridge, and then unwrapping it for the desired destination token.
+* Similarly, the cross-chain bridges respond with information about the cross-chain swap possibilities. This could involve wrapping the source token on one blockchain, sending it to another chain via the bridge, and then unwrapping it for the desired destination token XLM.
 
 **6. MUWP Checks for Direct Swap**
 
