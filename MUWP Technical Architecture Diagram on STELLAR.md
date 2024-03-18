@@ -39,9 +39,9 @@ sequenceDiagram
 
 ***
 
-##  Multi-Blockchain Swap Process with MUWP
+##  Multi-Path Swap Process with MUWP for Stellar
 
-This sequence diagram illustrates the process a user goes through to perform a token swap using MUWP. MUWP  facilitates swaps across various blockchains by finding the most optimal route for the user's desired exchange.
+This sequence diagram illustrates the process a user goes through to perform a token swap using MUWP. MUWP  facilitates swaps across various blockchains by finding the most optimal route for the user's XLM.
 
 Here's a breakdown of each step:
 
