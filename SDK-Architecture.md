@@ -109,6 +109,7 @@ This SDK architecture is designed to simplify blockchain integration for develop
 ---
 
 ### **Key Highlights of the Architecture**
+
 1. **Hierarchical Design:**  
    The architecture is structured into layers for clarity and scalability:
    - The **Core Layer** forms the foundation.
@@ -123,3 +124,4 @@ This SDK architecture is designed to simplify blockchain integration for develop
 
 4. **Scalability and Interoperability:**  
    The inclusion of the Token Bridge Module ensures the SDK is adaptable to multi-chain environments, while the Multi-Token Swap Engine makes token management seamless.
+
